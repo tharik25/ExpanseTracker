@@ -12,10 +12,16 @@
   </nav>
   <h1>Income</h1>
   <form id="income-form">
-    <input type="text" id="desc" placeholder="Description" required />
-    <input type="number" id="amount" placeholder="Amount" required />
-    <input type="date" id="date" required />
-    <button type="submit">Add Income</button>
+    <select id="currency" required>
+  <option value="SAR">SAR ﷼</option>
+  <option value="INR">INR ₹</option>
+  <option value="USD">USD $</option>
+  <option value="EUR">EUR €</option>
+</select>
+<input type="text" id="desc" placeholder="Description" required />
+<input type="number" id="amount" placeholder="Amount" required />
+<input type="date" id="date" required />
+<button type="submit">Add Entry</button>
   </form>
   <div id="income-list"></div>
   <script src="script.js"></script>
