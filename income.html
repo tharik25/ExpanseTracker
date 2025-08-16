@@ -32,11 +32,12 @@
     document.getElementById('income-form').onsubmit = e => {
       e.preventDefault();
       saveEntry({
-        type: 'income',
-        desc: document.getElementById('desc').value,
-        amount: parseFloat(document.getElementById('amount').value),
-        date: document.getElementById('date').value
-      });
+  type: 'income', // or 'expense'
+  desc: document.getElementById('desc').value,
+  amount: parseFloat(document.getElementById('amount').value),
+  date: document.getElementById('date').value,
+  currency: document.getElementById('currency').value
+});
       e.target.reset();
       renderList('income', 'income-list');
     };
