@@ -22,7 +22,7 @@ function renderList(type, containerId) {
 }
 
 function renderDashboard() {
-  const entries = getEntries();
+  const entries = getEntries().filter(e => e.currency === 'SAR');
   let income = 0, expense = 0;
   entries.forEach(e => {
     if (e.type === 'income') income += e.amount;
