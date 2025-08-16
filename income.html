@@ -23,6 +23,9 @@
 <input type="date" id="date" required />
 <button type="submit">Add Entry</button>
   </form>
+  <script>
+  document.getElementById('date').value = new Date().toISOString().split('T')[0];
+</script>
   <div id="income-list"></div>
   <script src="script.js"></script>
   <script>
