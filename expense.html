@@ -31,12 +31,13 @@
   <script>
     document.getElementById('expense-form').onsubmit = e => {
       e.preventDefault();
-      saveEntry({
-        type: 'expense',
-        desc: document.getElementById('desc').value,
-        amount: parseFloat(document.getElementById('amount').value),
-        date: document.getElementById('date').value
-      });
+     saveEntry({
+  type: 'expense', // or 'expense'
+  desc: document.getElementById('desc').value,
+  amount: parseFloat(document.getElementById('amount').value),
+  date: document.getElementById('date').value,
+  currency: document.getElementById('currency').value
+});
       e.target.reset();
       renderList('expense', 'expense-list');
     };
